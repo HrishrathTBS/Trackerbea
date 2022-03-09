@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+<p align="center">
+    <img src="./client/public/MERN.png" alt="mongo" height="100" />
+</p>
+<h1 align="center">BOILERPLATE</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a boilerplate repo for creating new mern stack apps that doesn't sucks.
+
+This is minimalist boilerplate for Full Stack MERN developers *(Recommended for beginners only)*. This boilerplate provides basic configurations like:
+
+* Sample CRUD API
+* Create-react-app boilerplate
+* NPM Scripts needed for MERN Stack
+* Sample mongoose connection provided for connecting API with database like mongodb
+* Heroku Deployment Configurations
 
 ## Available Scripts
 
-In the project directory, you can run:
+For APIs to work in development please add a **.env** file in root of the project and add your **MONGODB_URI** in that file.
 
-### `npm start`
+### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the server in the production mode.<br />
+Open [http://localhost:5000/api/v1/get](http://localhost:5000/api/v1/get) to view sample CRUD API output from server in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `yarn run dev`
 
-### `npm test`
+Runs the server in the development mode.<br />
+Open [http://localhost:5000/api/v1/get](http://localhost:5000/api/v1/get) to view sample CRUD API output from server in the browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The server will auto restart if you make any changes.
 
-### `npm run build`
+### `yarn run client`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn run mern`
 
-### `npm run eject`
+Runs the **server** and the **client** at the **same time** that makes MERN Stack development easier.<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open [http://localhost:5000/api/v1/get](http://localhost:5000/api/v1/get) to view sample CRUD API output from server in the browser.<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open [http://localhost:3000](http://localhost:3000) to view React App in the browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Steps for Heroku Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Dependencies
 
-## Learn More
+* nodejs
+* yarn package manager
+* heroku cli
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Deployment Steps
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Check whether you have heroku installed in you PC or not using `heroku --version` command. If you don't have then you can install it from [here](https://devcenter.heroku.com/articles/heroku-cli).
 
-### Code Splitting
+2. Create your account if you don't have any.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Then open the terminal or cmd in root directory and make sure you have created a git repository for your project. Remove **.git** directory if present in **client** folder otherwise it may lead to deployment issues.
 
-### Analyzing the Bundle Size
+4. **All the heroku build deployment scripts are provided you can review and update the engine in root package.json if you want to deploy with any other version of node and yarn** .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. Then login your heroku account using `heroku login`.
 
-### Making a Progressive Web App
+6. After login its time to create a new app with you app name using `heroku create <your unique app name>`. If you get name already used then you have to choose any other unique name.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+7. Now open the heroku account in the browser, you will see your app is created. Then open the settings of the app and in the config vars add **heroku variables** like **MONGODB_URI**.
 
-### Advanced Configuration
+8. For deployment run `git push heroku master` and it will deploy your app on heroku.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## LICENSE
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT LICENSE](LICENSE)
