@@ -22,7 +22,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mocha": "^9.0.2",
-    "mongoose": "^5.13.3"
+    "mongoose": "^5.13.3",
+    "react-router-dom": "^6.2.2"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
