@@ -1,12 +1,14 @@
-import Layout from './Components/Layout';
-import Board from './components/Board';
-import MyTodos from './components/MyTodos';
+import Layout from "./Components/Layout";
+import Board from "./components/Board";
+import MyTodos from "./components/MyTodos";
+import Notes from "./components/Notes";
 
 export const PathObject = {
   root: {
-    index: '/',
-    board: '/board',
-    mytodos: '/mytodos',
+    index: "/",
+    board: "/board",
+    mytodos: "/mytodos",
+    notes: "/notes",
   },
 };
 
@@ -22,6 +24,10 @@ export const RouteObject = {
       {
         path: PathObject.root.mytodos,
         component: <MyTodos />,
+      },
+      {
+        path: PathObject.root.notes,
+        component: <Notes />,
       },
     ],
   },
