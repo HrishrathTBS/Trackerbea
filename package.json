@@ -23,7 +23,8 @@
     "express": "^4.17.1",
     "mocha": "^9.0.2",
     "mongoose": "^5.13.3",
-    "react-router-dom": "^6.2.2"
+    "react-router-dom": "^6.2.2",
+    "react-swipeable-views": "^0.14.0"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
