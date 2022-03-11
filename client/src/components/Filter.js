@@ -7,16 +7,17 @@ const Filter = () => {
   const [search, setSearch] = useState('');
 
   const handleChange = (e) => {
-    const test = teams.filter((team) => {
-      return (
-        team.HeaderText.toLowerCase().toUpperCase().includes(e.target.value.toLowerCase()) ||
-        team.NotesText.toLowerCase().includes(e.target.value.toLowerCase()) ||
-        team.TitleText.toLowerCase().includes(e.target.value.toLowerCase())
-      );
-    });
-    setTeams(test);
     setSearch(e.target.value);
   };
+
+  const filtered = !search
+    ? teams
+    : teams.filter(
+        (person) =>
+          person.NotesText.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+          person.HeaderText.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+          person.TitleText.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+      );
 
   return (
     <>
@@ -27,7 +28,7 @@ const Filter = () => {
             <SearchIcon sx={{ position: 'relative', right: '40px' }} />
           </Box>
           <Box sx={{ marginTop: '70px' }}>
-            {teams.map((team) => (
+            {filtered.map((team) => (
               <>
                 <p>{team.HeaderText}</p>
                 <p>{team.TitleText}</p>

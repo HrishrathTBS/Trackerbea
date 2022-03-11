@@ -9,6 +9,7 @@ import People from '@mui/icons-material/People';
 import Dns from '@mui/icons-material/Dns';
 import LabelIcon from '@mui/icons-material/Label';
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
+import GroupsIcon from '@mui/icons-material/Groups';
 const FireNav = styled(List)({
   '& .MuiListItemButton-root': {
     paddingLeft: 24,
@@ -36,10 +37,13 @@ export default function CustomizedList() {
     },
     {
       label: 'Notes',
+      data: [{ icon: <LabelIcon />, label: 'label1', link: '/label1' }],
+    },
+    {
+      label: 'Teams',
       data: [
-        { icon: <LabelIcon />, label: 'label1', link: '/label1' },
-        { icon: <LabelIcon />, label: 'label2 ', link: '/label2' },
-        { icon: <LabelIcon />, label: 'label3 ', link: '/label3' },
+        { icon: <GroupsIcon />, label: 'Team1', link: '/team1' },
+        { icon: <GroupsIcon />, label: 'Team2', link: '/team2' },
       ],
     },
   ];

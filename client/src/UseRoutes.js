@@ -4,8 +4,8 @@ import Board from './components/Board';
 import Layout from './components/Layout';
 import MyTodos from './components/MyTodos';
 import Label1 from './pages/Label/Label1';
-import Label2 from './pages/Label/Label2';
-import Label3 from './pages/Label/Label3';
+import Team1 from './pages/teams/Team1';
+import Team2 from './pages/teams/Team2';
 const AppRoutes = () => {
   return useRoutes([
     {
@@ -25,12 +25,12 @@ const AppRoutes = () => {
           element: <Label1 />,
         },
         {
-          path: 'label2',
-          element: <Label2 />,
+          path: 'team1',
+          element: <Team1 />,
         },
         {
-          path: 'label3',
-          element: <Label3 />,
+          path: 'team2',
+          element: <Team2 />,
         },
       ],
     },
